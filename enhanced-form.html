@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Enhanced HTML5 Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background: #f9f9f9;
+            color: #222;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        h1, h2 {
+            color: #2a4d69;
+        }
+        form {
+            margin-top: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-right: 0.5em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        th {
+            background: #e3eafc;
+        }
+        ul, ol {
+            margin-left: 2rem;
+        }
+        figure {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        figcaption {
+            font-size: 0.95em;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Enhanced HTML5 Form Demo</h1>
+            <p>This page demonstrates a well-structured HTML5 form, along with lists, tables, and media elements for enhanced content and accessibility.</p>
+        </header>
+
+        <section aria-labelledby="features-list">
+            <h2 id="features-list">Key Features</h2>
+            <ul>
+                <li>Semantic HTML5 structure for accessibility</li>
+                <li>Comprehensive form with validation</li>
+                <li>Use of lists, tables, and media</li>
+                <li>Responsive and clear layout</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="sample-table">
+            <h2 id="sample-table">Sample Table: Workshop Schedule</h2>
+            <table>
+                <caption>Upcoming HTML5 Workshops</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Seats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-07-10</td>
+                        <td>HTML5 Forms</td>
+                        <td>Beginner</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-17</td>
+                        <td>Media &amp; Accessibility</td>
+                        <td>Intermediate</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-24</td>
+                        <td>Advanced Semantics</td>
+                        <td>Advanced</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="media-section">
+            <h2 id="media-section">Media Example</h2>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Laptop with code editor open" width="400" style="max-width:100%;height:auto;">
+                <figcaption>Learning HTML5 with hands-on coding sessions.</figcaption>
+            </figure>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section aria-labelledby="registration-form">
+            <h2 id="registration-form">Workshop Registration Form</h2>
+            <form action="#" method="post" autocomplete="on" aria-describedby="form-desc">
+                <p id="form-desc">Please fill out the form below to register for an upcoming workshop. Fields marked with <span aria-label="required">*</span> are required.</p>
+                
+                <div class="form-group">
+                    <label for="fullname">Full Name <span aria-label="required">*</span></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Doe" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span aria-label="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +1234567890" pattern="^\+?\d{10,15}$" autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth <span aria-label="required">*</span></label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="workshop">Select Workshop <span aria-label="required">*</span></label>
+                    <select id="workshop" name="workshop" required>
+                        <option value="" disabled selected>Select a workshop</option>
+                        <option value="forms">HTML5 Forms (2025-07-10)</option>
+                        <option value="media">Media &amp; Accessibility (2025-07-17)</option>
+                        <option value="semantics">Advanced Semantics (2025-07-24)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Session</label>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>
+                            <input type="radio" id="morning" name="session" value="morning" checked>
+                            <label for="morning" style="display:inline;">Morning</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="afternoon" name="session" value="afternoon">
+                            <label for="afternoon" style="display:inline;">Afternoon</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label>Topics of Interest</label>
+                    <ol>
+                        <li>
+                            <input type="checkbox" id="topic1" name="topics" value="forms">
+                            <label for="topic1" style="display:inline;">HTML5 Forms</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic2" name="topics" value="media">
+                            <label for="topic2" style="display:inline;">Media Elements</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic3" name="topics" value="accessibility">
+                            <label for="topic3" style="display:inline;">Accessibility</label>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments" rows="3" placeholder="Let us know your expectations or questions..." maxlength="300"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="referral">How did you hear about us?</label>
+                    <input type="text" id="referral" name="referral" placeholder="e.g. Friend, Social Media" readonly value="Website">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
